@@ -11,6 +11,7 @@ import serial
 import time
 import RPi.GPIO as GPIO
 import picamera
+from datetime import datetime
 
 # Set the GPIO mode to BCM
 GPIO.setmode(GPIO.BCM)
@@ -81,7 +82,8 @@ class PrinterController:
                     camera = picamera.PiCamera()
                     time.sleep(PRE_PROCESS_TIME)
                     # Roll the tape
-                    camera.start_recording(f"{VIDEO_NAME}_{i}_{j}.h264")
+                    dt = datetime.now().strftime('%d-%m-%Y-%H-%M-%S')
+                    camera.start_recording(f"{VIDEO_NAME}_{dt}_{i}_{j}.h264")
                     time.sleep(START_RECORDING_TIME)
                     # Turn laser on
                     GPIO.output(LASER_ON_GPIO_PIN, GPIO.HIGH)
