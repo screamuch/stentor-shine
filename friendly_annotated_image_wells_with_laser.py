@@ -1,3 +1,12 @@
+"""
+quickstart manual
+1. Turn on pi
+2. On pi use `raspivid -t 1000000` to aim the camera at the center of bottom left well (bottom refers to closest physically to user)
+3. Turn on the printer (physical switch)
+4. Set up the wells you'd like to image (WELLS variable in code)
+5. Run desired script - `python3 script_name.py`
+"""
+
 import serial
 import time
 import RPi.GPIO as GPIO
@@ -17,7 +26,7 @@ X_DISTANCE = 26 # do not change
 Y_DISTANCE = 26 # do not change
 LASER_ON_GPIO_PIN = 18 # do not change
 PORT = "/dev/ttyACM0"  # Replace with your port
-VIDEO_NAME = "test"  # Replace with your desired video name
+VIDEO_NAME = "test"  # Replace with your desired video name; can be a path to an arbitrary folder
 
 # Time parameters
 PRE_PROCESS_TIME = 10 # do not set below 7 - needed to let camera finish movement
