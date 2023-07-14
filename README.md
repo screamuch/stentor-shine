@@ -12,3 +12,6 @@ Moves printer head between wells, turns laser on and images. Fixed parameters, s
 
 ## `move_between_wells.py` - **outdated**
 Moves printer head between wells and images - *not recommended to use*
+
+## Acknowledgement
+This software is developed by Peter A. Chudinov, is currently unlicensed and provided as is. This work is funded by the National Science Foundation (NSF) grant No. DBI-1548297, Center for Cellular Construction. Disclaimer: Any opinions, findings and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.
